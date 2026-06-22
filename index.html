@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho N3 - Kruskal com Cytoscape.js</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Lógica para Engenharia de Software</p>
+          <h1>Árvore Geradora Mínima com Kruskal</h1>
+        </div>
+        <button id="run-kruskal-button" type="button">Executar Kruskal</button>
+      </header>
+
+      <section class="instructions" aria-label="Instruções de uso">
+        <p><strong>Clique no painel</strong> para criar nós.</p>
+        <p><strong>Clique em um nó e depois em outro</strong> para criar uma aresta com peso automático.</p>
+        <p><strong>Clique em uma aresta</strong> para editar o peso e <strong>clique com o botão direito</strong> para excluir nós ou arestas.</p>
+      </section>
+
+      <section class="editor-panel">
+        <div id="cy" aria-label="Editor de grafos"></div>
+      </section>
+
+      <p id="status-message" class="status-message" aria-live="polite"></p>
+    </main>
+
+    <aside class="sidebar" aria-label="Barra lateral do log">
+      <div class="sidebar-header">
+        <p class="eyebrow">Barra Lateral</p>
+        <h2>Log do Algoritmo</h2>
+        <p class="sidebar-copy">
+          O log mostra o conjunto <strong>A</strong> e os conjuntos disjuntos em cada iteração do algoritmo.
+        </p>
+      </div>
+
+      <div id="log-content" class="log-content" aria-live="polite"></div>
+    </aside>
+  </div>
+
+  <script src="vendor/cytoscape.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
